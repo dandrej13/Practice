@@ -21,7 +21,6 @@ nav {
     font-size: 20px;
     text-decoration: none;
     color: #2596be;
-    font-weight: bold;
     text-transform: uppercase;
 }
 
@@ -36,7 +35,7 @@ nav {
     width: 60%;
     margin: 0 auto;
     text-align: center;
-    padding: 20vh 0;
+    padding: 10vh 0;
 }
 
 #title h1 {
@@ -46,4 +45,153 @@ nav {
 
 #title p {
     font-size: 1.5;
+}
+/* card css start */
+.parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    padding: 10px 70px 40px;
+}
+
+.parent .myCard {
+    min-height: 200px;
+    margin-bottom: 20px;
+    width: 100%
+}
+
+.parent .myCard img {
+    width: 100%;
+    margin-bottom: 2vh;
+}
+
+.parent .myCard:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.parent a {
+    text-decoration: none;
+}
+
+.parent .myCard span {
+    color: rgb(62, 13, 167);
+    font-weight: 600;
+    font-size: 0.7em;
+
+}
+
+.parent .myCard p {
+    color: #000000;
+    font-weight: 600;
+    margin-top: 2vh;
+    font-weight: bolder;
+    text-decoration: none;
+
+}
+
+/* footer start */
+.myContainer {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 0px 2px;
+    grid-auto-flow: row;
+
+}
+
+.myContainer>div {
+    padding: 2em 3em;
+}
+
+.info {
+    margin: auto;
+}
+
+.info blockquote {
+    color: rgb(30, 162, 162);
+    line-height: 1.5;
+    width: 80%;
+    margin-bottom: 1.5em;
+}
+
+.info a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.1em;
+    margin: 0 10px 0 0;
+}
+
+.footerList ul {
+    list-style-type: none;
+}
+
+.footerList ul .listHeader {
+    color: rgb(0, 0, 0);
+    margin-bottom: 2vh;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 4vh;
+
+}
+
+.footerList ul li {
+    margin-bottom: 2vh;
+}
+
+.footerList ul li a {
+    text-decoration: none;
+    color: rgb(243, 142, 159);
+}
+
+/* footer end */
+
+/* tablet view */
+
+@media only screen and (max-width: 960px) {
+    .parent {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 50px 70px;
+    }
+
+    .myContainer {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 40px;
+
+    }
+
+    .myContainer ul {
+        margin: auto;
+        text-align: center;
+    }
+
+}
+
+
+@media only screen and (max-width: 720px) {
+    .parent {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+
+
+    .info {
+        width: 100%;
+        text-align: center;
+    }
+
+
+
+    .myContainer {
+        grid-template-columns: 1fr;
+        row-gap: 40px;
+
+    }
+
+    .myContainer ul {
+        margin: auto;
+        text-align: center;
+    }
+
 }
