@@ -9,11 +9,9 @@ nav {
     justify-content: space-between;
 }
 
-
 .navbarList li {
     list-style-type: none;
     display: inline;
-
 }
 
 .navbarList li a {
@@ -31,6 +29,7 @@ nav {
     padding: 20px 20px;
     border-radius: 30px 50px 15px;
 }
+
 #title {
     width: 60%;
     margin: 0 auto;
@@ -39,13 +38,14 @@ nav {
 }
 
 #title h1 {
-    font-size: 4.2rem;
+    font-size: 7.2rem;
     margin-bottom: 1rem;
 }
 
 #title p {
-    font-size: 1.5;
+    font-size: 1.5rem;
 }
+
 /* card css start */
 .parent {
     display: grid;
@@ -53,7 +53,7 @@ nav {
     grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 15px;
     grid-row-gap: 15px;
-    padding: 10px 70px 40px;
+    padding: 10px 70px;
 }
 
 .parent .myCard {
@@ -79,8 +79,7 @@ nav {
 .parent .myCard span {
     color: rgb(62, 13, 167);
     font-weight: 600;
-    font-size: 0.7em;
-
+    font-size: 1em;
 }
 
 .parent .myCard p {
@@ -89,7 +88,7 @@ nav {
     margin-top: 2vh;
     font-weight: bolder;
     text-decoration: none;
-
+    font-size: 1.3em;
 }
 
 /* footer start */
@@ -98,7 +97,6 @@ nav {
     grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: 0px 2px;
     grid-auto-flow: row;
-
 }
 
 .myContainer>div {
@@ -133,7 +131,6 @@ nav {
     font-weight: bold;
     font-size: 1.2em;
     margin-bottom: 4vh;
-
 }
 
 .footerList ul li {
@@ -146,9 +143,49 @@ nav {
 }
 
 /* footer end */
+/* modal start */
+.myModal {
+    width: 60%;
+    height: 60vh;
+    position: fixed;
+    background-color: white;
+    top: 20vh;
+    left: 20%;
+    border-radius: 10px;
+}
 
+.myModal img {
+    width: 100%;
+}
+
+.myModal h2 {
+    text-align: center;
+    margin: 0.5em 0;
+}
+
+.myModal span {
+    display: inline-block;
+    margin: 0.5em 10%;
+    color: orange;
+}
+
+.myModal p {
+    text-align: justify;
+    width: 80%;
+    margin: 0.5em auto;
+}
+
+.myModal button {
+    display: block;
+    width: 30%;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border-color: orange;
+    margin: 1em auto;
+}
+
+/* modal end */
 /* tablet view */
-
 @media only screen and (max-width: 960px) {
     .parent {
         grid-template-columns: repeat(2, 1fr);
@@ -158,40 +195,45 @@ nav {
     .myContainer {
         grid-template-columns: 1fr 1fr;
         row-gap: 40px;
-
     }
+}
 
-    .myContainer ul {
-        margin: auto;
+/*  */
+@media only screen and (max-width: 768px) {
+    nav {
+        display: block;
         text-align: center;
     }
 
-}
+    .navbarList li {
+        display: block;
+        margin: 10px;
+    }
 
+    .navbarList li .getNowBtn {
+        padding: 10px;
+    }
 
-@media only screen and (max-width: 720px) {
     .parent {
         grid-template-columns: repeat(1, 1fr);
     }
 
-
+    #title {
+        padding: 20px;
+    }
 
     .info {
         width: 100%;
         text-align: center;
     }
 
-
-
     .myContainer {
         grid-template-columns: 1fr;
         row-gap: 40px;
-
     }
 
     .myContainer ul {
         margin: auto;
         text-align: center;
     }
-
 }
